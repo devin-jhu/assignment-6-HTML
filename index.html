@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="pizza">
+    <meta name="keywords" content="cost, tax, pizza">
+    <meta name="author" content="devin-jhu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positive or negative</title>
+  </head>
+  <body>
+    <p>pizza</p>
+    <p>put your number of toppings in from 1-4 and for a large pizza put in 1 for a extra lagre pizza put in 2</p>
+    toppings:<input type="number" id="topings"><br>
+    pizza size:<input type="text" id="size"><br>
+    <button onclick="pizza()">cost</button><br>
+    <script>
+      let topings;
+      let size;
+      let large;
+      let normal;
+      let cost;
+      function pizza() {
+        topings=document.getElementById("topings").value;
+          if (topings==1) {
+            topings=1.00;
+          }
+          else if (topings==2) {
+            topings=1.75;
+          }
+          else if (topings==3) {
+            topings=2.50;
+          }
+          else if (topings==4) {
+            topings=3.35;
+          }
+        size=document.getElementById("size").value;
+          if (size==1) {
+            size=6.00;
+        }
+          else  if (size==2) {
+            size=10.00;
+        }
+        cost=(size+topings)*1.13
+        alert ("the cost with tax is "+cost)
+      }
+    </script>
+  </body>
+</html>
